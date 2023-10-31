@@ -41,7 +41,7 @@ def main():
 
                 else:
                     print("Invalid choice. Please try again.")
-                continue
+                    
         elif choice == "2":
             while True:
                 print("1. Search for a book")
@@ -69,14 +69,12 @@ def main():
 
                 else:
                     print("Invalid choice. Please try again.")
-                continue
 
         elif choice == "3":
                     print("Goodbye!")
                     break
         else:
             print("Invalid choice. Please try again.")
-        continue
 
 
 if __name__ == "__main__":
