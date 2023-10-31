@@ -1,4 +1,3 @@
-import Library as library
 class User:
 
     def search_book(self, library, title):

@@ -1,7 +1,8 @@
-import Library as Library;
-import User as User;
+from library import Library
+from user import User
 def main():
-    library = Library.Library()
+    library = Library()
+    user = User()
 
     while True:
         print("\nLibrary Management System")
@@ -14,11 +15,8 @@ def main():
             while True:
                 print("1. Add a book")
                 print("2. Remove a book")
-                print("3. Search for a book")
-                print("4. Update book availability")
-                print("5. Check book availability")
-                print("5. Issue a book")
-                print("6. Exit")
+                print("3. Update book availability")
+                print("4. Exit")
 
                 choice = input("Enter your choice: ")
 
@@ -33,15 +31,11 @@ def main():
                     library.remove_book(title)
 
                 elif choice == "3":
-                    title = input("Enter book title to search: ")
-                    Library.search_book(library, title)
-
-                elif choice == "4":
                     title = input("Enter book title to update availability: ")
                     new_quantity = int(input("Enter new quantity: "))
                     library.update_availability(title, new_quantity)
 
-                elif choice == "6":
+                elif choice == "4":
                     print("Goodbye!")
                     break
 
@@ -59,15 +53,15 @@ def main():
 
                 if choice == "1":
                     title = input("Enter book title to search: ")
-                    Library.search_book(library, title)
+                    user.search_book(library, title)
 
                 elif choice == "2":
                     title = input("Enter book title to check availability: ")
-                    User.check_availability(library, title)
+                    user.check_availability(library, title)
 
                 elif choice == "3":
                     title = input("Enter book title to issue: ")
-                    User.issue_book(library, title)
+                    user.issue_book(library, title)
 
                 elif choice == "4":
                     print("Goodbye!")
